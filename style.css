@@ -1,3 +1,106 @@
+:root {
+	--background: #111;
+	--text: #fff;
+	--yellow: #d1933f;
+	--red: #9b2a4e;
+	--purple: #7044a5;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: sans-serif;
+	color: var(--text);
+	text-align: center;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+body:before {
+	content: "";
+	display: block;
+	position: absolute;
+	inset: 0;
+	background-image: url("/bg.jpg");
+	background-size: cover;
+	background-position: top center;
+	z-index: -1;
+}
+body:after {
+	content: "";
+	display: block;
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(transparent, black);
+	z-index: 0;
+	line-height: 1.5rem;
+}
+
+main {
+	position: relative;
+	z-index: 1;
+}
+
+a {
+	color: var(--text);
+	background: var(--red);
+	padding: 0.25rem;
+	text-decoration: none;
+	transition: background 0.3s;
+}
+a:hover {
+	background: linear-gradient(
+		to bottom right,
+		var(--yellow),
+		var(--red),
+		var(--purple)
+	);
+}
+
+button {
+	background: var(--yellow);
+	font-size: 1.1rem;
+	padding: 0.5rem;
+	margin: 1rem;
+	border: 2px solid var(--red);
+	border-radius: 8px;
+	cursor: pointer;
+}
+button:hover {
+	box-shadow: 0 0 1rem var(--red);
+}
+
+dialog {
+	position: fixed;
+	background: linear-gradient(
+		to bottom right,
+		var(--yellow),
+		var(--red),
+		var(--purple)
+	);
+	margin: 0 auto;
+	text-align: center;
+	width: 400px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 8px;
+	border: 1px solid var(--purple);
+}
+dialog::backdrop {
+	background: rgba(74, 62, 89, 0.4);
+}
+
+.headline {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--text);
+	text-shadow: 5px 5px 0 var(--red);
 }

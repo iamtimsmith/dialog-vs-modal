@@ -18,27 +18,43 @@
 		<title>Dialog & Modal app</title>
 	</head>
 	<body>
-		<h1>Dialogs vs. Modals</h1>
-		<p>
-			This repo holds the code discussed in the
-			<a
-				href="https://www.iamtimsmith.com/modals-vs-dialogs-is-there-a-difference"
-				>Modals vs. Dialogs: Is there a difference?</a
-			>
-			blog post.
-		</p>
-		<!-- This button toggles the dialog open and closed -->
-		<button onclick="toggleDialog()">This button toggles a dialog</button>
-		<!-- The dialog element being used as a dialog -->
-		<dialog id="dialog">I'm a dialog</dialog>
-		<!-- This button opens a modal -->
-		<button onclick="openModal()">This button opens a modal</button>
-		<!-- The dialog element being used as a modal -->
-		<dialog id="modal">
-			<p>I'm a modal</p>
-			<!-- A button to be able to close the modal -->
-			<button onclick="closeModal()">Close</button>
-		</dialog>
+		<main>
+			<h1>Dialogs vs. Modals</h1>
+			<p>
+				This site accompanies the
+				<a
+					href="https://www.iamtimsmith.com/modals-vs-dialogs-is-there-a-difference"
+					>Modals vs. Dialogs: Is there a difference?</a
+				>
+				blog post.
+			</p>
+			<!-- This button toggles the dialog open and closed -->
+			<button onclick="toggleDialog()">This button toggles a dialog</button>
+			<!-- The dialog element being used as a dialog -->
+			<dialog id="dialog">
+				<p class="headline">See Powerline in concert!</p>
+				<img
+					src="/poster.png"
+					alt="Powerline World Tour poster"
+					height="400"
+				/>
+				<!-- A button to be able to close the modal -->
+				<button onclick="toggleDialog()">Close Dialog</button>
+			</dialog>
+			<!-- This button opens a modal -->
+			<button onclick="openModal()">This button opens a modal</button>
+			<!-- The dialog element being used as a modal -->
+			<dialog id="modal">
+				<p class="headline">See Powerline in concert!</p>
+				<img
+					src="/poster.png"
+					alt="Powerline World Tour poster"
+					height="400"
+				/>
+				<!-- A button to be able to close the modal -->
+				<button onclick="closeModal()">Close Modal</button>
+			</dialog>
+		</main>
 
 		<script src="main.js"></script>
 	</body>
