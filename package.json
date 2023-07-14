@@ -2,12 +2,5 @@
 	"name": "dialog-vs-modal",
 	"private": true,
 	"version": "0.0.0",
-	"source": "index.html",
-	"scripts": {
-		"dev": "parcel",
-		"build": "parcel build"
-	},
-	"devDependencies": {
-		"parcel": "^2.9.3"
-	}
+	"source": "index.html"
 }
