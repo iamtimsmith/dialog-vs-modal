@@ -28,7 +28,7 @@ body:before {
 	display: block;
 	position: absolute;
 	inset: 0;
-	background-image: url("images/bg.jpg");
+	background-image: url("images/background.jpg");
 	background-size: cover;
 	background-position: top center;
 	z-index: -1;
